@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { MyContext } from './src/context';
-import StageOne from './src/components/StageOne';
-import StageTwo from './src/components/StageTwo';
+import StageOne from './src/components/stageOne';
+import StageTwo from './src/components/stageTwo';
 
 class App extends Component {
   static contextType = MyContext;
