@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Input, Button, ListItem, Text } from 'react-native-elements';
 import { MyContext } from '../context'
+import { MainLogo } from '../utils/tools'
 
 const StageOne = () => {
 	const context = useContext(MyContext);
@@ -43,10 +44,7 @@ const StageOne = () => {
 			>
 				{( {handleChange, handleBlur, handleSubmit, values, touched, errors} ) => (
 					<>
-						<Text style={{
-							fontFamily: 'Pacifico-Regular',
-							fontSize: 30
-						}}>Who pays the bills</Text>
+						<MainLogo/>
 						<Input 
 							placeholder='enter name'
 							leftIcon={{type: 'antdesign', name:'adduser'}}
@@ -99,6 +97,7 @@ const StageOne = () => {
 
 
 const styles = StyleSheet.create({
+	
   button: {
     backgroundColor: '#DB3EB1',
     marginTop: 20,

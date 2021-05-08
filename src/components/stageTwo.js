@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { MyContext } from '../context';
 import { Input, Button, ListItem } from 'react-native-elements';
+import { MainLogo } from '../utils/tools'
 
 
 
@@ -10,9 +11,16 @@ const StageTwo = () => {
 	const context = useContext(MyContext);
 
 	return (
-		<View style={styles.container} >
-			<Text style={{marginTop: 20, fontSize: 30}}>The looser is</Text>
-			<Text style={{marginTop: 20, fontSize: 30}}>{context.state.result}</Text>
+		<View>
+			<MainLogo/>
+			<Text style={{textAlign: 'center', marginTop: 20, fontSize: 20}}>The looser is</Text>
+			<Text style={{
+				fontFamily: 'Pacifico-Regular',
+				fontSize: 30,
+				textAlign: 'center',
+			}}>
+				{context.state.result}
+			</Text>
 			<Button
 				title='Try again'
 				onPress={() => context.getNewLooser()}
